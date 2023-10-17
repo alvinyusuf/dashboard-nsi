@@ -12,6 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // ini table maintenance dengan konsep memecah downtime berdasarkan status mesin
         Schema::create('machine_repairs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('mesin_id');
